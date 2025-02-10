@@ -1,5 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
+import backgroundImage from './assets/HACKSCRIPT.png';
 
 function App() {
   const calculateTimeLeft = () => {
@@ -28,8 +29,21 @@ function App() {
     return () => clearTimeout(timer);
   });
 
+  const containerStyle = {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    width: 'fit-content',
+    height: 'fit-content',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'flex-start'
+  };
+
   return (
-    <>
+    <div style={containerStyle}>
       <div className="navigation">
         <div className="leftContainer">
           <div className="leftHalf">
@@ -72,12 +86,12 @@ function App() {
             <img src="/heroGIF2.gif" alt="" />
           </div>
         </div>
-        <div className="secondSection">
-          <h2 className="community">Our Team</h2>
-          lorem780
-        </div>
       </div>
-    </>
+      <div className="secondSection">
+        <h2 className="community">Our Team</h2>
+        lorem800
+      </div>
+    </div>
   );
 }
 
