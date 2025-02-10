@@ -5,20 +5,30 @@
 }
 
 @font-face {
-  font-family: 'Formula1';
-  src: url('/fonts/Formula1-Regular.otf') format('opentype'),
-       url('/fonts/Formula1-Bold.otf') format('opentype'),
-       url('/fonts/Formula1-Wide.otf') format('opentype');
+  font-family: 'Formula1-Regular';
+  src: url('/fonts/Formula1-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Formula1-Bold';
+  src: url('/fonts/Formula1-Bold.otf') format('opentype');
+}
 
-body {
+@font-face {
+  font-family: 'Formula1-Wide';
+  src: url('/fonts/Formula1-Wide.otf') format('opentype');
+}
+body, html {
   background: #000;
   height: 100%;
   width: 100%;
-  font-family: 'Formula1', sans-serif; /* Apply the custom font */
+  font-family: 'Formula1-Regular', sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
+
 .navigation {
   display: flex;
   flex-direction: row;
@@ -30,6 +40,7 @@ body {
   top: 0;
   left: 0;
   z-index: 1000;
+  background-color: #000; /* Ensure the navigation bar has a background color */
 }
 .leftContainer {
   margin-top: 1em;
@@ -48,9 +59,82 @@ body {
   width: 80px;
   margin-right: 10px;
 }
-.byText{
+.byText {
   color: #fff;
-  font-family: 'Formula1', sans-serif; /* Apply the custom font */
+  font-family: 'Formula1-Regular', sans-serif;
   font-weight: 200;
   font-size: 1.25em;
+}
+.verticalDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* Remove height: 100vh to allow the div to grow with content */
+}
+.heroSection {
+  /* margin-left: 30px; */
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px; /* Add top margin to push content below the navigation bar */
+  /* margin-bottom: 50px; */
+}
+.heroSubtitle {
+  font-family: 'Formula1-Bold', sans-serif;
+  font-size: 75px;
+  line-height: 70px;
+}
+.countdown {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  margin-top: 20px;
+}
+
+.time {
+  font-family: 'Formula1-Bold', sans-serif;
+  font-size: 50px;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.time span {
+  display: block;
+  font-size: 20px;
+  font-family: 'Formula1-Regular', sans-serif;
+}
+
+.registerButtonContainer {
+  margin-top: 20px;
+  /* text-align: center; */
+}
+
+.registerButton {
+  display: inline-block;
+  padding: 10px 20px;
+  font-family: 'Formula1-Bold', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  background-color: #ff0000; /* Adjust the color to match your theme */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.registerButton:hover {
+  background-color: #cc0000; 
+  color: #fff;/* Adjust the hover color to match your theme */
+}
+.leftHero {
+  width: 50vw;
+  margin-right: 50px;
+}
+.rightHero img{
+  width: 40vw;
+}
+.secondSection {
+  /* margin-top: ; */
 }
