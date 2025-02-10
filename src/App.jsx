@@ -1,23 +1,13 @@
-import './App.css'
+import './App.css';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
     <>
-      <div className="navigation">
-        <div className="leftContainer">
-          <div className="leftHalf">
-            <img src="/hackscriptLogo/Black-Transparent.png" alt="Logo" />
-          </div>
-          <div className="rightHalf">
-
-          </div>
-        </div>
-        <div className="rightContainer">
-
-        </div>
-      </div>
+      <Navigation />
+      {/* Add the rest of your page content here */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
